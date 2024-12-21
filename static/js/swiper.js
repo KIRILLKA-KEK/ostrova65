@@ -1,6 +1,4 @@
-// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-
-let swiper = new Swiper('.weather__swiper', {
+let swiperWeather = new Swiper('.weather__swiper', {
 	// Optional parameters
 	direction: 'horizontal',
 	// loop: true,
@@ -8,5 +6,16 @@ let swiper = new Swiper('.weather__swiper', {
 	// If we need pagination
 	pagination: {
 		el: '.swiper-pagination',
+	},
+});
+
+let swiperTrack = new Swiper('.track__swiper', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+
+	// If we need pagination
+	pagination: {
+		el: '.track-paggination',
 	},
 });

@@ -18,24 +18,6 @@ html, body, .wrapper {
 	width: 100%;
 	padding: 0 4px 0 4px;
 }
-body {
-	/*background-image: url('../img/bg/01.jpeg');*/
-}
-/*body::before {
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: -1;
-
-	display: block;
-	background-image: url('../img/bg/01.jpeg');
-	background-size:cover;
-	width: 100%;
-	height: 100%;
-	filter: brightness(0.9);
-}*/
 
 .map {
 	width: 100%;
@@ -195,7 +177,6 @@ body {
 	right: -100%;
 	z-index: 1000;
 	margin-top: -10px;
-	/*background-image: url(../img/bg/02.jpeg);*/
 	background-color: #fff;
 }
 .menu.active {
@@ -328,4 +309,46 @@ body {
 	font-size: 24px;
 	border-radius: 10px;
 	text-decoration: none;
+}
+
+.tracks {
+	padding-bottom: 20px;
+}
+.track__swiper {}
+.track {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #222;
+	padding: 10px;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.swiper-slide {
+}
+.track__title {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	font-size: 22px;
+	font-weight: 700;
+}
+.track__num {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 0 0 5px #222;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+}
+.track__name {
+	font-size: 32px;
+}
+.track__text {
+	font-weight: 550;
+}
+.track-paggination {
+	display: flex;
+	justify-content: center;
 }
