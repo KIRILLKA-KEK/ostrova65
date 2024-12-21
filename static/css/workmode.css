@@ -1,0 +1,26 @@
+.modes {
+	color: #000;
+}
+.modes__container {}
+.mode {
+	border-radius: 10px;
+	box-shadow: 0 0 3px #222;
+	padding: 10px 15px;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.mode__title {
+	font-size: 24px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.mode__list {
+}
+.mode__list li:first-child {
+	font-weight: bold;
+}
+.mode__list li {
+	line-height: 1.5;
+	display: flex;
+	justify-content: space-between;
+}

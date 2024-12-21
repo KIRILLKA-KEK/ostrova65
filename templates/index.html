@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Горный воздух</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<link href="https://cdn.maptiler.com/maptiler-sdk-js/v2.5.1/maptiler-sdk.css" rel="stylesheet" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="sos">
+			<a href="contacts#sos">SOS</a>
+		</div>
+		<header class="header">
+			<div class="container header__container">
+				<div class="header__block">
+					<div class="header__back"><a href="#"></a></div>
+					<div class="header__title">Горный воздух</div>
+				</div>
+				<div class="header__block">
+					<div class="header__burger"><span></span></div>
+				</div>
+			</div>
+		</header>
+		<div class="menu">
+			<div class="container">
+				<div class="menu__container">
+					<div class="menu__item">
+						<div class="menu__button"><a href="https://ski-gv.ru/skipass-info/#popup-open">Пополнить ски-пасс</a></div>
+					</div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="https://ski-gv.ru/rentals/">Прокат снаряжения</a></div>
+					</div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="https://ski-gv.ru/services/">Прочие услуги</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="weather">
+			<div class="container">
+				<div class="swiper weather__swiper">
+					<div class="swiper-wrapper">
+						<div class="weather__card swiper-slide">
+							<div class="weather__main">
+								<div class="weather__info">
+									<div class="weather__status">{{ condition }}</div>
+									<div class="weather__text">Сейчас</div>
+									<div class="weather__temp">{{ temperatura }}&deg</div>
+									<div class="weather__wind">{{ wind }}</div>
+								</div>
+								<div class="weather__icon">
+									<img src="{{ icon }}" alt="">
+								</div>
+							</div>
+							<div class="weather__down">
+								<div class="weather__info-card">Восход <br>{{ vosxod }}</div>
+								<div class="weather__info-card">Заход <br>{{ zaxod }}</div>
+								<div class="weather__info-card">Давление <br>{{ davlenie }}</div>
+								<div class="weather__info-card">Влажность <br>{{ vlazhn }}</div>
+							</div>
+						</div>
+						<div class="weather__card swiper-slide">
+							<div class="weather__main">
+								<div class="weather__info">
+									<div class="weather__status">{{ acondition }}</div>
+									<div class="weather__text">Вечер</div>
+									<div class="weather__temp">{{ atemperatura }}&deg</div>
+									<div class="weather__wind">{{ awind }}</div>
+								</div>
+								<div class="weather__icon">
+									<img src="{{ aicon }}" alt="">
+								</div>
+							</div>
+							<div class="weather__down">
+								<div class="weather__info-card">Восход <br>{{ avosxod }}</div>
+								<div class="weather__info-card">Заход <br>{{ azaxod }}</div>
+								<div class="weather__info-card">Давление <br>{{ adavlenie }}</div>
+								<div class="weather__info-card">Влажность <br>{{ avlazhn }}</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+		<div class="services">
+			<div class="container">
+				<div class="services__container">
+					<div class="service">
+						<a href="workmode">
+							<div class="service__icon"><img src="{{ url_for('static', filename='img/services/01.svg') }}" alt=""></div>
+							<div class="service__text">Режим работы</div>
+						</a>
+					</div>
+					<div class="service">
+						<a href="contacts">
+							<div class="service__icon"><img src="{{ url_for('static', filename='img/services/02.svg') }}" alt=""></div>
+							<div class="service__text">Контакты</div>
+						</a>
+					</div>
+					<div class="service">
+						<a href="writeus">
+							<div class="service__icon"><img src="{{ url_for('static', filename='img/services/03.svg') }}" alt=""></div>
+							<div class="service__text">Написать нам</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="chat">
+			<div class="container">
+				<div class="chat__container">
+					<a href="https://t.me/ostrova_ski">
+						<div class="chat__icon"><img src="{{ url_for('static', filename='img/chat/03.svg') }}" alt=""></div>
+						<div class="chat__text">Чатик горного воздуха</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="map" id="map"></div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.5.1/maptiler-sdk.umd.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/swiper.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/burger.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/map.js') }}"></script>
+</body>
+</html>

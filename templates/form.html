@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Написать нам</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+<body>
+	<div class="sos">
+		<a href="contacts#sos">SOS</a>
+	</div>
+	<header class="header">
+			<div class="container header__container">
+				<div class="header__block">
+					<div class="header__back"><a href="ostrova"></a></div>
+					<div class="header__title">Написать нам</div>
+				</div>
+				<div class="header__block">
+					<div class="header__burger"><span></span></div>
+				</div>
+			</div>
+	</header>
+	<div class="menu">
+			<div class="container">
+				<div class="menu__container">
+					<div class="menu__item">
+						<div class="menu__button"><a href="https://ski-gv.ru/skipass-info/#popup-open">Пополнить ски-пасс</a></div>
+					</div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="https://ski-gv.ru/rentals/">Прокат снаряжения</a></div>
+					</div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="https://ski-gv.ru/services/">Прочие услуги</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<form action="" method="get" class="form">
+		<div class="container">
+			<div class="form__container">
+				<input type="text" name="theme" required placeholder="Тема обращения">
+				<div class="form__input">Ф.И.О <br> <input type="text" name="name" required></div>
+				<div class="form__input">Электронная почта <br> <input type="email" name="email" required placeholder="example@mail.com"></div>
+				<div class="form__input">Телефон <br> <input type="tel" name="phone" required placeholder="+71234567890"></div>
+				<div class="form__input">Введите текст обращения <br> <textarea name="text" required></textarea></div>
+				<div class="form__input"><input type="checkbox" name="agree" required="" id="agree"><label for="agree">Я согласен с <a href="https://ski-gv.ru/polzovatelskoe-soglashenie/">пользовательский соглашением</a></label></div>
+			</div>
+			<div class="form__button">
+				<input type="submit" value="Отправить">
+			</div>
+		</div>
+	</form>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/burger.js') }}"></script>
+</body>
+</html>
