@@ -20,6 +20,10 @@
 					<div class="header__title">Горный воздух</div>
 				</div>
 				<div class="header__block">
+					<div class="header__notification">
+						<img src="{{ url_for('static', filename='img/notifications/02.png') }}" alt="">
+						<div class="header__notify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit amet esse neque quibusdam enim quisquam et, facere nesciunt accusamus nemo expedita animi vel aut, laudantium.</div>
+					</div>
 					<div class="header__burger"><span></span></div>
 				</div>
 			</div>
@@ -126,6 +130,7 @@
 	<script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.5.1/maptiler-sdk.umd.min.js"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/swiper.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/burger.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/notifications.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/map.js') }}"></script>
 </body>
 </html>

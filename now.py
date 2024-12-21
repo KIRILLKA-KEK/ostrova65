@@ -46,6 +46,7 @@ def update_weather_data_2():
         davlenie = norm_params.split()[3][8:]
         break
 
+update_weather_data_2()
 
 # Регистрация задачи обновления данных каждые 1 час
 schedule.every(1).hour.do(update_weather_data_2)

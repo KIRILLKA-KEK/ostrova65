@@ -18,9 +18,13 @@
 						<div class="header__back"><a href="ostrova"></a></div>
 						<div class="header__title">Режим работы</div>
 					</div>
-					<div class="header__block">
-						<div class="header__burger"><span></span></div>
+					<<div class="header__block">
+					<div class="header__notification">
+						<img src="{{ url_for('static', filename='img/notifications/02.png') }}" alt="">
+						<div class="header__notify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit amet esse neque quibusdam enim quisquam et, facere nesciunt accusamus nemo expedita animi vel aut, laudantium.</div>
 					</div>
+					<div class="header__burger"><span></span></div>
+				</div>
 				</div>
 		</header>
 		<div class="menu">
@@ -72,5 +76,6 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/burger.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/notifications.js') }}"></script>
 </body>
 </html>

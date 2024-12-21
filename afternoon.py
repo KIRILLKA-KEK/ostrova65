@@ -15,7 +15,7 @@ adavlenie = ''
 
 
 def update_weather_data():
-    global acondition, atemperatura, awind, avni, avosxod, azaxod, avlazhn, adavlenie
+    global acondition, atemperatura, awind, awni, avosxod, azaxod, avlazhn, adavlenie
 
     html = requests.get('https://ski-gv.ru/weather/1/').text  # получаем html код сайта
     soup = LxmlSoup(html)  # создаём экземпляр класса LxmlSoup
@@ -43,6 +43,7 @@ def update_weather_data():
         adavlenie = norm_params.split()[3][8:]
         break
 
+update_weather_data()
 
 # Регистрация задачи обновления данных каждые 1 час
 schedule.every(1).hour.do(update_weather_data)

@@ -15,6 +15,10 @@
 					<div class="header__title">Контакты</div>
 				</div>
 				<div class="header__block">
+					<div class="header__notification">
+						<img src="{{ url_for('static', filename='img/notifications/02.png') }}" alt="">
+						<div class="header__notify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit amet esse neque quibusdam enim quisquam et, facere nesciunt accusamus nemo expedita animi vel aut, laudantium.</div>
+					</div>
 					<div class="header__burger"><span></span></div>
 				</div>
 			</div>
@@ -66,7 +70,8 @@
 							<a href="tel:+7(4242)51-11-10">+7 (4242) 51-11-10 (доп. 0)</a>
 						</div>
 					</div>
-					<div class="contact__button"><a href="https://ski-gv.ru/infocenter/sos/#">Отправить гео-координаты</a></div>
+					<div class="contact__button"><a href="#">Отправить гео-координаты</a></div>
+					<!-- <div class="contact__button"><a href="https://ski-gv.ru/infocenter/sos/#">Отправить гео-координаты</a></div> -->
 				</div>
 				<div class="contact">
 					<div class="contact__text">Мы в социальных сетях</div>
@@ -79,5 +84,6 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/burger.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/notifications.js') }}"></script>
 </body>
 </html>
