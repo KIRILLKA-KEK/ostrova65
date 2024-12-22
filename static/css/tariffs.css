@@ -1,0 +1,22 @@
+.tariffs {
+}
+.tariff {
+	box-shadow: 0 0 5px #222;
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.tariff__name {
+	font-size: 26px;
+}
+.tariff__price {
+	font-size: 22px;
+}
+.tariffs__text {
+	padding: 5px;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.tariffs__text span {
+	font-weight: bold;
+}

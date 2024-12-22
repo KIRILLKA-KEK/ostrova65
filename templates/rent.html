@@ -3,12 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Написать нам</title>
+	<title>Прокат снаряжения</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/rent.css') }}">
 </head>
 <body>
-	<div class="sos">
+	<div class="wrapper">
+		<div class="sos">
 			<a href="contacts#sos">SOS</a>
 		</div>
 		<header class="header">
@@ -49,21 +50,29 @@
 				</div>
 			</div>
 		</div>
-	<form action="" method="get" class="form">
-		<div class="container">
-			<div class="form__container">
-				<input type="text" name="theme" required placeholder="Тема обращения">
-				<div class="form__input">Ф.И.О <br> <input type="text" name="name" required></div>
-				<div class="form__input">Электронная почта <br> <input type="email" name="email" required placeholder="example@mail.com"></div>
-				<div class="form__input">Телефон <br> <input type="tel" name="phone" required placeholder="+71234567890"></div>
-				<div class="form__input">Введите текст обращения <br> <textarea name="text" required></textarea></div>
-				<div class="form__input"><input type="checkbox" name="agree" required="" id="agree"><label for="agree">Я согласен с <a href="https://ski-gv.ru/polzovatelskoe-soglashenie/">пользовательский соглашением</a></label></div>
-			</div>
-			<div class="form__button">
-				<input type="submit" value="Отправить">
+		<div class="rent">
+			<div class="container">
+				<div class="rent__container">
+					<div class="rent__block">
+						<div class="rent__image"><img src="{{ url_for('static', filename='img/rent/01.jpg') }}" alt=""></div>
+						<div class="rent__name"><a href="https://ski-gv.ru/rentals/company/3/">Пункт проката "Неваляшка"</a></div>
+					</div>
+					<div class="rent__block">
+						<div class="rent__image"><img src="{{ url_for('static', filename='img/rent/02.jpg') }}" alt=""></div>
+						<div class="rent__name"><a href="https://ski-gv.ru/rentals/company/5/">Пункт проката "Чемпион"</a></div>
+					</div>
+					<div class="rent__block">
+						<div class="rent__image"><img src="{{ url_for('static', filename='img/rent/03.jpg') }}" alt=""></div>
+						<div class="rent__name"><a href="https://ski-gv.ru/rentals/company/6/">Пункт проката "Кати-Катай"</a></div>
+					</div>
+					<div class="rent__block">
+						<div class="rent__image"><img src="{{ url_for('static', filename='img/rent/04.jpg') }}" alt=""></div>
+						<div class="rent__name"><a href="https://ski-gv.ru/rentals/company/7/">Пункт проката "ПоГорам"</a></div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</form>
+	</div>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/burger.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/notifications.js') }}"></script>
 </body>

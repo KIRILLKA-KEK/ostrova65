@@ -23,7 +23,7 @@ def update_weather_data():
     links = soup.find_all('div', class_='weather-data')
     for i, link in enumerate(links):
         acondition = soup.find_all("span", class_="weather-condition")[i].text()
-        atemperatura = soup.find_all("p", class_="weather-card__temp temp")[i].text()[0:3]
+        atemperatura = soup.find_all("p", class_="weather-card__temp temp")[i].text()[0:-4]
         veter = links[1].text().split()[3:]
         awind = ' '.join(veter)
         break

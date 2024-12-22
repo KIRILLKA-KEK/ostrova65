@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Тарифы</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/tariffs.css') }}">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="sos">
+			<a href="contacts#sos">SOS</a>
+		</div>
+		<header class="header">
+			<div class="container header__container">
+				<div class="header__block">
+					<div class="header__back"><a href="/"></a></div>
+					<div class="header__title">Горный воздух</div>
+				</div>
+				<div class="header__block">
+					<div class="header__notification active"> <!-- add class active -->
+						<img src="{{ url_for('static', filename='img/notifications/01.png') }}" class="notify__img" alt=""> <!-- 02 без; 01 active-->
+						<div class="header__notify notify">
+							<div class="notify__text">{{ notification }} Ссылка на наш чат <a href="https://t.me/ostrova_ski">https://t.me/ostrova_ski</a></div>
+						</div>
+					</div>
+					<div class="header__burger"><span></span></div>
+				</div>
+			</div>
+		</header>
+		<div class="menu">
+			<div class="container">
+				<div class="menu__container">
+					<div class="menu__item">
+						<div class="menu__button"><a href="https://ski-gv.ru/skipass-info/#popup-open">Пополнить ски-пасс</a></div>
+					</div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="tariffs">Тарифы</a></div>
+					</div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="rent">Прокат снаряжения</a></div>
+					</div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="https://ski-gv.ru/services/">Прочие услуги</a></div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="https://ski-gv.ru/webcams/">Вебкамеры</a></div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tariffs">
+			<div class="container">
+				<div class="tariff">
+					<div class="tariff__name">КД "Запад низ"/"Запад верх"/ "Север"</div>
+					<div class="tariff__price">200 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">КД "Юг"</div>
+					<div class="tariff__price">250 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">КД "Красная"**</div>
+					<div class="tariff__price">400 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">Школьный*</div>
+					<div class="tariff__text">Для учащихся до 18 лет при предъявлении справки из школы</div>
+					<div class="tariff__price">125 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">Студенческий*</div>
+					<div class="tariff__text">Для студентов очной формы обучения при предъявлении студенческого билета</div>
+					<div class="tariff__price">150 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">Особый*</div>
+					<div class="tariff__text">Для инвалидов II и III группы</div>
+					<div class="tariff__price">125 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">Семейный*</div>
+					<div class="tariff__text">Для всех членов семьи от 3 детей</div>
+					<div class="tariff__price">125 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">Безлимит "3 часа"</div>
+					<div class="tariff__price">1100 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">Безлимит "5 часов"</div>
+					<div class="tariff__price">1500 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">Безлимит "Дневной"</div>
+					<div class="tariff__price">2500 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">Безлимит "2 дня"</div>
+					<div class="tariff__price">4500 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">Безлимит "3 дня"</div>
+					<div class="tariff__price">6500 ₽</div>
+				</div>
+				<div class="tariff">
+					<div class="tariff__name">Безлимит "5 дня"</div>
+					<div class="tariff__price">8500 ₽</div>
+				</div>
+				<div class="tariffs__text"><span>*</span> На все тарифы кроме "Школьный", "Студенческий", "Особый" и "Семейный" действует скидка <span>10% по карте сахалинца</span>. Также для покупки данных тарифов необходимо предъявить <span>подтверждающий статус и удостоверяющие личность документы</span></div>
+				<div class="tariffs__text"><span>**</span> Подъем на КД "Юг", "Красная-север" и "Север" в зимний период возможен <span>только с зимним спортивным снаряжением (лыжи, сноуборд и т. д.)</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/burger.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/notifications.js') }}"></script>
+</body>
+</html>

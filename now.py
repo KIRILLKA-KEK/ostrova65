@@ -26,7 +26,7 @@ def update_weather_data_2():
     links = soup.find_all('div', class_='weather-data')
     for i, link in enumerate(links):
         condition = soup.find_all("span", class_="weather-condition")[i].text()
-        temperatura = soup.find_all("p", class_="weather-card__temp temp")[i].text()[0:3]
+        temperatura = soup.find_all("p", class_="weather-card__temp temp")[i].text()[0:-4]
         veter = links[1].text().split()[3:]
         wind = ' '.join(veter)
         break

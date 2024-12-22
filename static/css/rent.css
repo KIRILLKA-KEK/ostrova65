@@ -1,0 +1,32 @@
+.rent {}
+.rent__container {}
+.rent__block {
+	border-radius: 10px;
+	box-shadow: 0 0 5px #222;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+.rent__image {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.rent__image img {
+	object-fit: cover;
+	object-position: 50% 50%;
+	width: 100%;
+	height: 100%;
+}
+.rent__name {
+	margin: 7px;
+}
+.rent__name a {
+	text-decoration: none;
+	font-size: 26px;
+	color: #0066B3;
+	font-weight: bold;
+}

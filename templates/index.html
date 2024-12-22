@@ -16,16 +16,18 @@
 		<header class="header">
 			<div class="container header__container">
 				<div class="header__block">
-					<div class="header__back"><a href="#"></a></div>
+					<div class="header__back"><a href="/"></a></div>
 					<div class="header__title">Горный воздух</div>
 				</div>
-				<div class="header__block"> <!-- Можно копировать -->
+				<div class="header__block">
 					<div class="header__notification active"> <!-- add class active -->
-						<img src="{{ url_for('static', filename='img/notifications/02.png') }}" alt=""> <!-- 02 без; 01 active-->
-						<div class="header__notify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit amet esse neque quibusdam enim quisquam et, facere nesciunt accusamus nemo expedita animi vel aut, laudantium.</div>
+						<img src="{{ url_for('static', filename='img/notifications/01.png') }}" class="notify__img" alt=""> <!-- 02 без; 01 active-->
+						<div class="header__notify notify">
+							<div class="notify__text">{{ notification }} Ссылка на наш чат <a href="https://t.me/ostrova_ski">https://t.me/ostrova_ski</a></div>
+						</div>
 					</div>
 					<div class="header__burger"><span></span></div>
-				</div> <!-- Можно копировать -->
+				</div>
 			</div>
 		</header>
 		<div class="menu">
@@ -35,10 +37,16 @@
 						<div class="menu__button"><a href="https://ski-gv.ru/skipass-info/#popup-open">Пополнить ски-пасс</a></div>
 					</div>
 					<div class="menu__item">
-						<div class="menu__button"><a href="https://ski-gv.ru/rentals/">Прокат снаряжения</a></div>
+						<div class="menu__button"><a href="tariffs">Тарифы</a></div>
+					</div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="rent">Прокат снаряжения</a></div>
 					</div>
 					<div class="menu__item">
 						<div class="menu__button"><a href="https://ski-gv.ru/services/">Прочие услуги</a></div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="https://ski-gv.ru/webcams/">Вебкамеры</a></div>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -50,8 +58,8 @@
 						<div class="weather__card swiper-slide">
 							<div class="weather__main">
 								<div class="weather__info">
-									<div class="weather__status">{{ condition }}</div>
 									<div class="weather__text">Сейчас</div>
+									<div class="weather__status">{{ condition }}</div>
 									<div class="weather__temp">{{ temperatura }}&deg</div>
 									<div class="weather__wind">{{ wind }}</div>
 								</div>
@@ -69,8 +77,8 @@
 						<div class="weather__card swiper-slide">
 							<div class="weather__main">
 								<div class="weather__info">
-									<div class="weather__status">{{ acondition }}</div>
 									<div class="weather__text">Вечер</div>
+									<div class="weather__status">{{ acondition }}</div>
 									<div class="weather__temp">{{ atemperatura }}&deg</div>
 									<div class="weather__wind">{{ awind }}</div>
 								</div>
@@ -128,108 +136,105 @@
 		<div class="tracks">
 			<div class="container">
 				<div class="swiper track__swiper">
-					<div class="swiper-wrapper"> <!-- ТРЕКИ -->
+					<div class="swiper-wrapper">
 						<div class="track swiper-slide">
 							<div class="track__title">
-								<div class="track__num">10</div>
+								<div style="color: white; background: green" class="track__num">2</div>
+								<div class="track__name">Запад низ</div>
+							</div>
+							<div class="track__text">Длина: 1450 м</div>
+							<div class="track__text">Часы работы: 09:00 - 22:00</div>
+							<div class="track__text">Высота: 190 м</div>
+							<div style="color: green" class="track__text">Статус: {{ status_lw }}</div>
+						</div>
+						<div class="track swiper-slide">
+							<div class="track__title">
+								<div style="color: white; background: #ba0d07" class="track__num">10</div>
 								<div class="track__name">Запад верх</div>
 							</div>
 							<div class="track__text">Длина: 1100 м</div>
 							<div class="track__text">Часы работы: 09:00 - 18:00</div>
 							<div class="track__text">Высота: 300 м</div>
-							<div class="track__text">Статус: закрыта</div>
+							<div style="color: green" class="track__text">Статус: {{ status_up }}</div>
 						</div>
 						<div class="track swiper-slide">
 							<div class="track__title">
-								<div class="track__num">10</div>
-								<div class="track__name">Запад верх</div>
+								<div style="color: white; background: #ba0d07" class="track__num">1</div>
+								<div class="track__name">Динамо</div>
 							</div>
-							<div class="track__text">Длина: 1100 м</div>
-							<div class="track__text">Часы работы: 09:00 - 18:00</div>
-							<div class="track__text">Высота: 300 м</div>
-							<div class="track__text">Статус: закрыта</div>
+							<div class="track__text">Длина: 3300 м</div>
+							<div class="track__text">Часы работы: 08:00 - 18:00</div>
+							<div class="track__text">Высота: 495 м</div>
+							<div style="color: #ba0d07" class="track__text">Статус: закрыта</div>
 						</div>
 						<div class="track swiper-slide">
 							<div class="track__title">
-								<div class="track__num">10</div>
-								<div class="track__name">Запад верх</div>
+								<div style="color: white; background: green" class="track__num">3</div>
+								<div class="track__name">Юго-западный серпантин</div>
 							</div>
-							<div class="track__text">Длина: 1100 м</div>
-							<div class="track__text">Часы работы: 09:00 - 18:00</div>
-							<div class="track__text">Высота: 300 м</div>
-							<div class="track__text">Статус: закрыта</div>
+							<div class="track__text">Длина: 4200 м</div>
+							<div class="track__text">Часы работы: 09:00 - 21:00</div>
+							<div class="track__text">Высота: 490 м</div>
+							<div style="color: #ba0d07" class="track__text">Статус: закрыта</div>
 						</div>
 						<div class="track swiper-slide">
 							<div class="track__title">
-								<div class="track__num">10</div>
-								<div class="track__name">Запад верх</div>
+								<div style="color: white; background: black" class="track__num">4</div>
+								<div class="track__name">Армейка</div>
 							</div>
-							<div class="track__text">Длина: 1100 м</div>
+							<div class="track__text">Длина: 1150 м</div>
 							<div class="track__text">Часы работы: 09:00 - 18:00</div>
-							<div class="track__text">Высота: 300 м</div>
-							<div class="track__text">Статус: закрыта</div>
+							<div class="track__text">Высота: 280 м</div>
+							<div style="color: #ba0d07" class="track__text">Статус: закрыта</div>
 						</div>
 						<div class="track swiper-slide">
 							<div class="track__title">
-								<div class="track__num">10</div>
-								<div class="track__name">Запад верх</div>
+								<div style="color: white; background: black" class="track__num">5</div>
+								<div class="track__name">Спортивная</div>
 							</div>
-							<div class="track__text">Длина: 1100 м</div>
-							<div class="track__text">Часы работы: 09:00 - 18:00</div>
-							<div class="track__text">Высота: 300 м</div>
-							<div class="track__text">Статус: закрыта</div>
+							<div class="track__text">Длина: 2500 м</div>
+							<div class="track__text">Часы работы: 09:00 - 17:00</div>
+							<div class="track__text">Высота: 460 м</div>
+							<div style="color: #ba0d07" class="track__text">Статус: закрыта</div>
 						</div>
 						<div class="track swiper-slide">
 							<div class="track__title">
-								<div class="track__num">10</div>
-								<div class="track__name">Запад верх</div>
+								<div style="color: white; background: black" class="track__num">6</div>
+								<div class="track__name">Спортивный рукав</div>
 							</div>
-							<div class="track__text">Длина: 1100 м</div>
-							<div class="track__text">Часы работы: 09:00 - 18:00</div>
-							<div class="track__text">Высота: 300 м</div>
-							<div class="track__text">Статус: закрыта</div>
+							<div class="track__text">Длина: 500 м</div>
+							<div class="track__text">Высота: 190 м</div>
+							<div style="color: #ba0d07" class="track__text">Статус: закрыта</div>
 						</div>
 						<div class="track swiper-slide">
 							<div class="track__title">
-								<div class="track__num">10</div>
-								<div class="track__name">Запад верх</div>
+								<div style="color: white; background: black" class="track__num">7</div>
+								<div class="track__name">Ски-кросс</div>
 							</div>
-							<div class="track__text">Длина: 1100 м</div>
-							<div class="track__text">Часы работы: 09:00 - 18:00</div>
-							<div class="track__text">Высота: 300 м</div>
-							<div class="track__text">Статус: закрыта</div>
+							<div class="track__text">Длина: 1250 м</div>
+							<div class="track__text">Часы работы: 08:00 - 17:00</div>
+							<div class="track__text">Высота: 350 м</div>
+							<div style="color: #ba0d07" class="track__text">Статус: закрыта</div>
 						</div>
 						<div class="track swiper-slide">
 							<div class="track__title">
-								<div class="track__num">10</div>
-								<div class="track__name">Запад верх</div>
+								<div style="color: white; background: #ba0d07" class="track__num">8</div>
+								<div class="track__name">Расческа</div>
 							</div>
-							<div class="track__text">Длина: 1100 м</div>
-							<div class="track__text">Часы работы: 09:00 - 18:00</div>
-							<div class="track__text">Высота: 300 м</div>
-							<div class="track__text">Статус: закрыта</div>
+							<div class="track__text">Длина: 350 м</div>
+							<div class="track__text">Высота: 70 м</div>
+							<div style="color: #ba0d07" class="track__text">Статус: закрыта</div>
 						</div>
 						<div class="track swiper-slide">
 							<div class="track__title">
-								<div class="track__num">10</div>
-								<div class="track__name">Запад верх</div>
+								<div style="color: white; background: #ba0d07" class="track__num">9</div>
+								<div class="track__name">Семидесятка</div>
 							</div>
-							<div class="track__text">Длина: 1100 м</div>
-							<div class="track__text">Часы работы: 09:00 - 18:00</div>
-							<div class="track__text">Высота: 300 м</div>
-							<div class="track__text">Статус: закрыта</div>
+							<div class="track__text">Длина: 100 м</div>
+							<div class="track__text">Высота: 500 м</div>
+							<div style="color: #ba0d07" class="track__text">Статус: закрыта</div>
 						</div>
-						<div class="track swiper-slide">
-							<div class="track__title">
-								<div class="track__num">10</div>
-								<div class="track__name">Запад верх</div>
-							</div>
-							<div class="track__text">Длина: 1100 м</div>
-							<div class="track__text">Часы работы: 09:00 - 18:00</div>
-							<div class="track__text">Высота: 300 м</div>
-							<div class="track__text">Статус: закрыта</div>
-						</div>
-					</div> <!-- ТРЕКИ -->
+					</div>
 					<div class="track-paggination"></div>
 				</div>
 			</div>

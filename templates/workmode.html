@@ -13,19 +13,21 @@
 			<a href="contacts#sos">SOS</a>
 		</div>
 		<header class="header">
-				<div class="container header__container">
-					<div class="header__block">
-						<div class="header__back"><a href="ostrova"></a></div>
-						<div class="header__title">Режим работы</div>
-					</div>
-					<<div class="header__block">
-					<div class="header__notification">
-						<img src="{{ url_for('static', filename='img/notifications/02.png') }}" alt="">
-						<div class="header__notify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit amet esse neque quibusdam enim quisquam et, facere nesciunt accusamus nemo expedita animi vel aut, laudantium.</div>
+			<div class="container header__container">
+				<div class="header__block">
+					<div class="header__back"><a href="/"></a></div>
+					<div class="header__title">Горный воздух</div>
+				</div>
+				<div class="header__block">
+					<div class="header__notification active"> <!-- add class active -->
+						<img src="{{ url_for('static', filename='img/notifications/01.png') }}" class="notify__img" alt=""> <!-- 02 без; 01 active-->
+						<div class="header__notify notify">
+							<div class="notify__text">{{ notification }} Ссылка на наш чат <a href="https://t.me/ostrova_ski">https://t.me/ostrova_ski</a></div>
+						</div>
 					</div>
 					<div class="header__burger"><span></span></div>
 				</div>
-				</div>
+			</div>
 		</header>
 		<div class="menu">
 			<div class="container">
@@ -34,10 +36,16 @@
 						<div class="menu__button"><a href="https://ski-gv.ru/skipass-info/#popup-open">Пополнить ски-пасс</a></div>
 					</div>
 					<div class="menu__item">
-						<div class="menu__button"><a href="https://ski-gv.ru/rentals/">Прокат снаряжения</a></div>
+						<div class="menu__button"><a href="tariffs">Тарифы</a></div>
+					</div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="rent">Прокат снаряжения</a></div>
 					</div>
 					<div class="menu__item">
 						<div class="menu__button"><a href="https://ski-gv.ru/services/">Прочие услуги</a></div>
+					<div class="menu__item">
+						<div class="menu__button"><a href="https://ski-gv.ru/webcams/">Вебкамеры</a></div>
+					</div>
 					</div>
 				</div>
 			</div>
